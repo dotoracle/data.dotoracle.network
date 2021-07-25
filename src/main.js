@@ -1,29 +1,25 @@
 import Vue from 'vue'
-import App from './App.vue'
-import router from './router'
-import store from './store'
-import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
-import axios from 'axios'
+import Vuesax from 'vuesax'
 import VueAxios from 'vue-axios'
 import BigNumber from 'bignumber.js'
 import moment from 'moment'
+import App from './App.vue'
+import router from './router'
+import store from './store'
+import axios from 'axios'
 
-import '@/assets/js/app.js'
-// Import Bootstrap an BootstrapVue CSS files (order is important)
-import '@/assets/scss/app.scss'
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
 import 'highcharts/css/highcharts.scss'
 
-// Make BootstrapVue available throughout your project
-Vue.use(BootstrapVue)
+Vue.use(Vuesax, {
+  colors: {
+    primary: '#e2007a'
+  }
+})
+
 // Optionally install the BootstrapVue icon components plugin
-Vue.use(IconsPlugin)
 Vue.use(VueAxios, axios)
 
 Vue.config.productionTip = false
-
-
 
 Vue.prototype.formatNumber = function (number) {
   number = new BigNumber(number)

@@ -12,8 +12,8 @@ import 'highcharts/css/highcharts.scss'
 
 Vue.use(Vuesax, {
   colors: {
-    primary: '#e2007a'
-  }
+    primary: '#e2007a',
+  },
 })
 
 // Optionally install the BootstrapVue icon components plugin
@@ -28,7 +28,7 @@ Vue.prototype.formatNumber = function (number) {
   return seps.join('.')
 }
 Vue.prototype.hideDecimal = function (input, number = 3) {
-  return Math.floor(input * 10**number) / 10**number
+  return Math.floor(input * 10 ** number) / 10 ** number
 }
 Vue.prototype.formatAge = function (timestamp) {
   return moment(timestamp).fromNow()
@@ -37,5 +37,7 @@ Vue.prototype.formatAge = function (timestamp) {
 new Vue({
   router,
   store,
-  render: function (h) { return h(App) }
+  render: function (h) {
+    return h(App)
+  },
 }).$mount('#app')

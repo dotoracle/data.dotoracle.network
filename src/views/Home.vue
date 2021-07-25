@@ -10,7 +10,7 @@ import List from '../components/List'
 export default {
   name: 'Home',
   components: {
-    List
-  }
+    List,
+  },
 }
 </script>

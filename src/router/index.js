@@ -14,8 +14,9 @@ const routes = [
 
 const router = new VueRouter({
   mode: 'history',
+  // eslint-disable-next-line no-undef
   base: process.env.BASE_URL,
-  routes
+  routes,
 })
 
 export default router

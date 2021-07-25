@@ -3,34 +3,34 @@
     <Header></Header>
 
     <main class="container">
-      <router-view/>
+      <router-view />
     </main>
   </div>
 </template>
 
 <style>
-  .bd-placeholder-img {
-    font-size: 1.125rem;
-    text-anchor: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-  }
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
 
-  @media (min-width: 768px) {
-    .bd-placeholder-img-lg {
-      font-size: 3.5rem;
-    }
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
   }
+}
 </style>
 
 <script>
-  // @ is an alias to /src
-  import Header from './components/Header'
+// @ is an alias to /src
+import Header from './components/Header'
 
-  export default {
-    components: {
-      Header
-    }
-  }
+export default {
+  components: {
+    Header,
+  },
+}
 </script>

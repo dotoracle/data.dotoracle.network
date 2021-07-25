@@ -3,7 +3,7 @@
         <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark" aria-label="Main navigation">
             <div class="container-fluid justify-content-md-center">
                 <a class="navbar-brand" href="#">
-                    <img src="../assets/logo.png" alt="" height="50px">
+                    <!-- <img src="../assets/logo.png" alt="" height="50px"> -->
                 </a>
                 <button @click="isOpen ? isOpen = false : isOpen = true"
                         class="navbar-toggler p-0 border-0"

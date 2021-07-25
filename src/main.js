@@ -3,12 +3,14 @@ import Vuesax from 'vuesax'
 import VueAxios from 'vue-axios'
 import BigNumber from 'bignumber.js'
 import moment from 'moment'
+import axios from 'axios'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-import axios from 'axios'
-
+import 'vuesax/dist/vuesax.css'
 import 'highcharts/css/highcharts.scss'
+import './assets/css/reset.css'
+import './assets/scss/style.scss'
 
 Vue.use(Vuesax, {
   colors: {
@@ -37,7 +39,7 @@ Vue.prototype.formatAge = function (timestamp) {
 new Vue({
   router,
   store,
-  render: function (h) {
-    return h(App)
+  render: function (createElement) {
+    return createElement(App)
   },
 }).$mount('#app')

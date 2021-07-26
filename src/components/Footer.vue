@@ -27,6 +27,7 @@
 import styled from 'vue-styled-components'
 import OhVueIcon from 'oh-vue-icons'
 import { FaTelegramPlane, FaTwitter, FaGithub } from 'oh-vue-icons/icons'
+OhVueIcon.add(FaTelegramPlane, FaTwitter, FaGithub)
 
 const DTOFooter = styled.div`
   display: flex;
@@ -81,7 +82,6 @@ const SocialItem = styled.li`
     }
   }
 `
-OhVueIcon.add(FaTelegramPlane, FaTwitter, FaGithub)
 
 export default {
   name: 'Footer',

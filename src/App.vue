@@ -8,9 +8,9 @@
   >
     <div id="app" class="bg-light">
       <Header />
-      <main class="container">
+      <MainWrapper>
         <router-view />
-      </main>
+      </MainWrapper>
       <Footer />
     </div>
   </theme-provider>
@@ -20,11 +20,23 @@
 import Header from './components/Header'
 import Footer from './components/Footer'
 import { ThemeProvider } from 'vue-styled-components'
+import styled from 'vue-styled-components'
+
+const MainWrapper = styled.div`
+  background-image: url('${require('./assets/images/page-bg.png')}');
+  background-size: cover;
+  background-attachment: fixed;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  min-height: calc(100vh - 160px - 6rem);
+}
+`
 
 export default {
   components: {
-    Header,
     'theme-provider': ThemeProvider,
+    Header,
+    MainWrapper,
     Footer,
   },
 }

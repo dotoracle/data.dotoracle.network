@@ -9,7 +9,9 @@
     <div id="app" class="bg-light">
       <Header />
       <MainWrapper>
-        <router-view />
+        <Container>
+          <router-view />
+        </Container>
       </MainWrapper>
       <Footer />
     </div>
@@ -31,12 +33,19 @@ const MainWrapper = styled.div`
   min-height: calc(100vh - 160px - 6rem);
 }
 `
+const Container = styled.div`
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 1280px;
+`
 
 export default {
   components: {
     'theme-provider': ThemeProvider,
     Header,
     MainWrapper,
+    Container,
     Footer,
   },
 }

@@ -10,6 +10,7 @@ import store from './store'
 import 'vuesax/dist/vuesax.css'
 import 'highcharts/css/highcharts.scss'
 import './assets/css/reset.css'
+import './assets/fonts/stylesheet.css'
 import './assets/scss/style.scss'
 
 Vue.use(Vuesax, {

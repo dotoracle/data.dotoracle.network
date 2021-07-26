@@ -1,11 +1,11 @@
 <template>
   <div>
-    <!-- <List></List> -->
     <TitleWrapper>
       <Title>Cryptocurrency (USD pairs) Data Feeds</Title>
       <TitleShadow>Cryptocurrency (USD pairs) Data Feeds</TitleShadow>
     </TitleWrapper>
     <SubTitle>Explore the decentralized oracle networks powered by DotOracle</SubTitle>
+    <List></List>
   </div>
 </template>
 
@@ -50,6 +50,7 @@ const TitleShadow = styled.span`
 `
 const SubTitle = styled.p`
   margin-top: 1rem;
+  margin-bottom: 1.5rem;
   font-size: 18px;
   font-weight: 600;
   color: #fff;

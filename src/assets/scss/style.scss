@@ -5,3 +5,16 @@ a {
   text-decoration: none;
   transition: 0.5s all ease;
 }
+
+[vs-theme=dark] {
+  color: rgba(var(--vs-text), 1);
+}
+
+.vs-table__header .vs-input {
+  width: 100%;
+}
+
+.vs-table__th__content {
+  justify-content: center;
+  width: 100%;
+}

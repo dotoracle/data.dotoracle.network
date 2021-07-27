@@ -12,7 +12,6 @@
   "dependencies": {
     "axios": "^0.21.1",
     "bignumber.js": "^9.0.1",
-    "cryptocurrency-icons": "^0.18.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
     "highcharts": "^9.1.2",
@@ -21,6 +20,8 @@
     "prettier": "^2.3.2",
     "vue": "^2.6.14",
     "vue-axios": "^3.2.4",
+    "vue-cryptoicon": "^0.17.2",
+    "vue-js-modal": "^2.0.0-rc.6",
     "vue-router": "^3.2.0",
     "vue-styled-components": "^1.6.0",
     "vuesax": "^4.0.1-alpha.25",

@@ -16,7 +16,7 @@
         <vs-tr :key="i" v-for="(tr, i) in $vs.getPage($vs.getSearch(items, search), page, max)" :data="tr">
           <vs-td>
             <Token>
-              <cryptoicon :symbol="tr.token" size="24" />
+              <img :src="require(`../../node_modules/cryptocurrency-icons/svg/white/${tr.token}.svg`)" height="24px" />
               {{ tr.token.toUpperCase() }}
             </Token>
           </vs-td>
@@ -54,7 +54,7 @@ const Token = styled.div`
   justify-content: center;
   width: 100%;
 
-  svg {
+  img {
     margin-right: 0.5rem;
   }
 `

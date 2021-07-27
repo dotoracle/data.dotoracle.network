@@ -39,3 +39,14 @@ a {
   padding: 2rem;
   box-shadow: 0 0 20px #e2007a19;
 }
+
+.highcharts-background {
+  background-color: #e6e6e6;
+  fill: transparent;
+}
+.highcharts-axis-labels, .highcharts-title {
+  fill: #fff;
+}
+.highcharts-title {
+  font-size: 1.6rem;
+}

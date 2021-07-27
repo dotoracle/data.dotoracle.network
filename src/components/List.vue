@@ -61,7 +61,6 @@ const Token = styled.div`
 
 export default {
   components: {
-    TokenDetail,
     TableWrapper,
     Token,
   },
@@ -85,7 +84,7 @@ export default {
   },
   methods: {
     showModal(item) {
-      this.$modal.show(TokenDetail, { token: item.token }, { height: 'auto', width: 1140 })
+      this.$modal.show(TokenDetail, { token: item.token }, { height: 'auto' })
     },
     resetInfoModal() {
       this.infoModal.title = ''

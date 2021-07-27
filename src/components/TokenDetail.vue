@@ -10,13 +10,12 @@
     <ExchangeRow>
       <Exchange v-for="exchange in exchangePrice" :key="exchange.exchange">
         <img :src="require(`@/assets/images/exchange/${exchange.exchange}.png`)" />
+        <p>{{ exchange.exchange.toUpperCase() }}:&nbsp;</p>
         <Price>$ {{ formatNumber(hideDecimal(exchange.price)) }}</Price>
       </Exchange>
     </ExchangeRow>
 
-    <div class="small">
-      <div :id="'chart-' + token" style="height: 400px; min-width: 380px"></div>
-    </div>
+    <Chart :id="'chart-' + token"></Chart>
     <br />
   </div>
 </template>
@@ -62,40 +61,94 @@ const SubTitle = styled.p`
   margin-bottom: 1.5rem;
   font-size: 18px;
   font-weight: 600;
+  line-height: 1.5;
   color: #fff;
 `
 const ExchangeRow = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   flex-wrap: wrap;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  @media (min-width: 1200px) {
+    // justify-content: space-between;
+  }
 `
 const Exchange = styled.div`
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-image: url('${require('../assets/images/exchange/exchange-bg.png')}');
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  margin-bottom: 1rem;
   border-radius: 0.5rem;
-  width: 12%;
   text-align: center;
-  min-height: 100px;
 
   img {
+    display: none;
     width: 80%;
     height: 40px;
     object-fit: contain;
+  }
+
+  p {
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  @media (min-width: 768px) {
+    justify-content: flex-start;
+    width: 50%;
+  }
+
+  @media (min-width: 992px) {
+    width: 30%;
+  }
+
+  @media (min-width: 1200px) {
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 1rem;
+    background-image: url('${require('../assets/images/exchange/exchange-bg.png')}');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    width: calc(12% - 0.6rem);
+    min-height: 100px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    img {
+      display: block;
+    }
+
+    p {
+      display: none;
+    }
   }
 `
 const Price = styled.div`
   display: block;
   font-size: 16px;
   font-weight: 700;
+`
+const Chart = styled.div`
+  width: 100%;
+  height: 150px;
+
+  @media (min-width: 1200px) {
+    height: 300px;
+  }
 `
 
 export default {
@@ -120,6 +173,7 @@ export default {
     ExchangeRow,
     Exchange,
     Price,
+    Chart,
   },
   async created() {
     const loading = this.$vs.loading({

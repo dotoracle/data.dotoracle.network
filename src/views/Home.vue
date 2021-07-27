@@ -53,6 +53,7 @@ const SubTitle = styled.p`
   margin-bottom: 1.5rem;
   font-size: 18px;
   font-weight: 600;
+  line-height: 1.5;
   color: #fff;
 `
 

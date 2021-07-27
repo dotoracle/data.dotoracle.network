@@ -84,7 +84,7 @@ export default {
   },
   methods: {
     showModal(item) {
-      this.$modal.show(TokenDetail, { token: item.token }, { height: 'auto' })
+      this.$modal.show(TokenDetail, { token: item.token }, { height: 'auto', scrollable: true })
     },
     resetInfoModal() {
       this.infoModal.title = ''

@@ -14,17 +14,17 @@
       </template>
       <template #tbody>
         <vs-tr :key="i" v-for="(tr, i) in $vs.getPage($vs.getSearch(items, search), page, max)" :data="tr">
-          <vs-td>
+          <vs-td data-label="Token: ">
             <Token>
               <cryptoicon :symbol="tr.token" size="24" />
               {{ tr.token.toUpperCase() }}
             </Token>
           </vs-td>
-          <vs-td>
+          <vs-td data-label="Price: ">
             <span>${{ formatNumber(hideDecimal(tr.price)) }}</span>
           </vs-td>
-          <vs-td>
-            {{ formatAge(tr.timestamp * 1000) }}
+          <vs-td data-label="Last updated: ">
+            <span>{{ formatAge(tr.timestamp * 1000) }}</span>
           </vs-td>
           <vs-td>
             <vs-button transparent @click="showModal(tr)">Details</vs-button>

@@ -10,8 +10,44 @@ a {
   color: rgba(var(--vs-text), 1);
 }
 
+.vs-table table {
+  @media (max-width: 767px) {
+    min-width: 0;
+  }
+}
+
 .vs-table__header .vs-input {
   width: 100%;
+}
+
+.vs-table__thead {
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.vs-table__tbody {
+
+  @media (max-width: 767px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.vs-table__tr {
+
+  @media (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid rgba(255, 255, 255, .1);
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+    flex: 0 0 50%;
+    width: 50%;
+
+    &:nth-child(even) {
+      border-right: 0;
+    }
+  }
 }
 
 .vs-table__th__content {
@@ -21,6 +57,29 @@ a {
 
 .vs-table__td {
   vertical-align: middle;
+  line-height: 1.5;
+
+  @media (max-width: 767px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    &::before {
+      content: attr(data-label);
+      width: 50%;
+      flex: 0 0 50%;
+      text-align: left;
+    }
+
+    &:last-child::before {
+      display: none;
+    }
+
+    span {
+      text-align: right;
+    }
+  }
 }
 
 .vs-button {

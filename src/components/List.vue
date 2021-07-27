@@ -82,7 +82,7 @@ export default {
     },
     getImgUrl(token) {
       // eslint-disable-next-line no-undef
-      var images = require.context('../assets/images/token', false, /\.svg$/)
+      let images = require.context('../../node_modules/cryptocurrency-icons/svg/white', false, /\.svg$/)
       return images('./' + token + '.svg')
     },
   },

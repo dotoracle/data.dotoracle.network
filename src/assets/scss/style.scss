@@ -93,10 +93,10 @@ a {
 }
 
 .vm--modal {
-  border-radius: 0.75rem;
-  background-color: #000;
+  border-radius: 0.75rem !important;
+  background-color: #000 !important;
   padding: 1rem;
-  box-shadow: 0 0 20px #e2007a19;
+  box-shadow: 0 0 20px #e2007a19 !important;
   width: 90% !important;
   max-width: 1140px;
   left: 50% !important;

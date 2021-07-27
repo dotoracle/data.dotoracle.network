@@ -1,5 +1,8 @@
 <template>
   <div>
+    <CloseButton @click="$emit('close')">
+      <v-icon name="io-close-outline" scale="1.5" />
+    </CloseButton>
     <TitleWrapper>
       <Title>{{ token.toUpperCase() }} Price Source</Title>
       <TitleShadow>{{ token.toUpperCase() }} Price Source</TitleShadow>
@@ -24,7 +27,24 @@
 import styled from 'vue-styled-components'
 import Highcharts from 'highcharts'
 import moment from 'moment'
+import OhVueIcon from 'oh-vue-icons'
+import { IoCloseOutline } from 'oh-vue-icons/icons'
+OhVueIcon.add(IoCloseOutline)
 
+const CloseButton = styled.span`
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+
+  svg {
+    fill: #fff;
+
+    path {
+      stroke: #fff;
+    }
+  }
+`
 const TitleWrapper = styled.div`
   position: relative;
 `
@@ -166,6 +186,7 @@ export default {
     }
   },
   components: {
+    CloseButton,
     TitleWrapper,
     Title,
     TitleShadow,
@@ -174,6 +195,7 @@ export default {
     Exchange,
     Price,
     Chart,
+    'v-icon': OhVueIcon,
   },
   async created() {
     const loading = this.$vs.loading({

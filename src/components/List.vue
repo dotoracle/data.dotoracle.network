@@ -70,11 +70,6 @@ export default {
       items: [],
       page: 1,
       max: 10,
-      infoModal: {
-        id: 'info-modal',
-        token: 'btc',
-        content: '',
-      },
     }
   },
   computed: {},
@@ -85,10 +80,6 @@ export default {
   methods: {
     showModal(item) {
       this.$modal.show(TokenDetail, { token: item.token }, { height: 'auto', scrollable: true })
-    },
-    resetInfoModal() {
-      this.infoModal.title = ''
-      this.infoModal.content = ''
     },
     async getToken() {
       let url = 'https://api-token-price.dotoracle.network/tokens'

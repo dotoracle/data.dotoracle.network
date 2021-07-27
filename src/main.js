@@ -4,8 +4,6 @@ import VueAxios from 'vue-axios'
 import BigNumber from 'bignumber.js'
 import moment from 'moment'
 import axios from 'axios'
-import Cryptoicon from 'vue-cryptoicon'
-import icons from 'vue-cryptoicon/src/icons'
 import VModal from 'vue-js-modal'
 import App from './App.vue'
 import router from './router'
@@ -20,12 +18,6 @@ Vue.use(Vuesax, {
   colors: {
     primary: '#e2007a',
   },
-})
-
-Cryptoicon.add(icons)
-Vue.use(Cryptoicon, {
-  size: '24',
-  color: 'white',
 })
 
 Vue.use(VModal)

@@ -106,3 +106,14 @@ a {
     padding: 2rem;
   }
 }
+
+.highcharts-background {
+  background-color: #e6e6e6;
+  fill: transparent;
+}
+.highcharts-axis-labels, .highcharts-title {
+  fill: #fff;
+}
+.highcharts-title {
+  font-size: 1.6rem;
+}

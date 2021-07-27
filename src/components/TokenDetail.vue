@@ -9,7 +9,6 @@
     </TitleWrapper>
     <SubTitle>Read from many main sources eg Binance, Huobi, Chainlink Oracle, DotOracle...</SubTitle>
 
-    <h6>24h Changes</h6>
     <ExchangeRow>
       <Exchange v-for="exchange in exchangePrice" :key="exchange.exchange">
         <img :src="require(`@/assets/images/exchange/${exchange.exchange}.png`)" />
@@ -139,10 +138,10 @@ const Exchange = styled.div`
     background-image: url('${require('../assets/images/exchange/exchange-bg.png')}');
     background-repeat: no-repeat;
     background-size: cover;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
     width: calc(12% - 0.6rem);
-    min-height: 100px;
+    min-height: 90px;
 
     &:last-child {
       margin-right: 0;
@@ -164,10 +163,10 @@ const Price = styled.div`
 `
 const Chart = styled.div`
   width: 100%;
-  height: 150px;
+  height: 300px;
 
   @media (min-width: 1200px) {
-    height: 300px;
+    height: 350px;
   }
 `
 
@@ -236,7 +235,11 @@ export default {
         },
 
         title: {
-          text: this.token.toUpperCase() + ' price history',
+          text: this.token.toUpperCase() + ' Price History',
+        },
+        credits: {
+          text: 'DotOracle',
+          href: 'https://dotoracle.network'
         },
 
         xAxis: {

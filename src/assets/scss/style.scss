@@ -18,3 +18,24 @@ a {
   justify-content: center;
   width: 100%;
 }
+
+.vs-table__td {
+  vertical-align: middle;
+}
+
+.vs-button {
+  font-family: Montserrat, sans-serif;
+  border-radius: 3px;
+  margin: 0 auto;
+}
+
+.vm--overlay {
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.vm--modal {
+  border-radius: 0.75rem;
+  background-color: #000;
+  padding: 2rem;
+  box-shadow: 0 0 20px #e2007a19;
+}

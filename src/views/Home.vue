@@ -5,7 +5,7 @@
       <TitleShadow>Cryptocurrency (USD pairs) Data Feeds</TitleShadow>
     </TitleWrapper>
     <SubTitle>Explore the decentralized oracle networks powered by DotOracle</SubTitle>
-    <List></List>
+    <List />
   </div>
 </template>
 

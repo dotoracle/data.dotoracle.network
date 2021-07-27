@@ -4,6 +4,9 @@ import VueAxios from 'vue-axios'
 import BigNumber from 'bignumber.js'
 import moment from 'moment'
 import axios from 'axios'
+import Cryptoicon from 'vue-cryptoicon'
+import icons from 'vue-cryptoicon/src/icons'
+import VModal from 'vue-js-modal'
 import App from './App.vue'
 import router from './router'
 import store from './store'
@@ -18,6 +21,14 @@ Vue.use(Vuesax, {
     primary: '#e2007a',
   },
 })
+
+Cryptoicon.add(icons)
+Vue.use(Cryptoicon, {
+  size: '24',
+  color: 'white',
+})
+
+Vue.use(VModal)
 
 // Optionally install the BootstrapVue icon components plugin
 Vue.use(VueAxios, axios)

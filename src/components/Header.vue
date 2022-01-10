@@ -109,6 +109,7 @@ const MobileMenu = styled.div`
   padding-top: 1rem;
   padding-bottom: 1rem;
   width: 100%;
+  z-index: 99;
   color: #fff;
 
   @media (min-width: 768px) {
